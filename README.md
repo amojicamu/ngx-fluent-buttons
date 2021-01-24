@@ -47,3 +47,6 @@ Even though this look and feel is achieved using Angular Material buttons and me
   <mat-icon>done</mat-icon> Accept Demo
 </ngx-fluent-button>
 ```
+
+Checkout the full [samples](https://github.com/amojicamu/ngx-fluent-buttons/blob/main/apps/sample/src/app/buttons/buttons.component.html) page with all options
+
