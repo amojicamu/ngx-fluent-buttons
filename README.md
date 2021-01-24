@@ -22,7 +22,7 @@ Motivated by this [closed issue](https://github.com/angular/components/issues/77
 
 ## Features
 
-Even though a similar look and feel can be done using Angular Material buttons and buttons, and in plac replacement is not trivial. These components support all features from Angular Material button, using the same properties and directives.
+Even though this look and feel is achieved using Angular Material buttons and menus, a component that can be used as an in place replacement is not trivial. These components support all features from Angular Material button, using the same properties and directives.
 
 - All variants: normal, raised, flat, stroked
 - States: enabled, disabled
