@@ -1,6 +1,6 @@
 {
   "name": "ngx-fluent-buttons",
-  "version": "11.1.0-beta0",
+  "version": "11.1.0-beta1",
   "description": "Fluent Design buttons for Angular",
   "peerDependencies": {
     "@angular/common": "^11.0.9",
