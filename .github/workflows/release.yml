@@ -1,0 +1,20 @@
+name: Node.js Package
+on:
+  release:
+    types: [created]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    
+    - name: Download a Build Artifact
+      uses: actions/download-artifact@v2.0.8
+      with:
+        # Artifact name
+        name: buttons-library
+        # Destination path
+        path: /
+    
+    - run: npm publish
+      env:
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
