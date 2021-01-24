@@ -29,4 +29,4 @@ jobs:
       - name: Build library
         run: |
           npm install
-          ng build ngx-fluent-buttons --prod.
+          npm run nx run ngx-fluent-buttons:build:production
