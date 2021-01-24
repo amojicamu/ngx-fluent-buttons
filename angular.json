@@ -17,7 +17,10 @@
             "tsConfig": "apps/sample/tsconfig.app.json",
             "aot": true,
             "assets": ["apps/sample/src/favicon.ico", "apps/sample/src/assets"],
-            "styles": ["./node_modules/@angular/material/prebuilt-themes/indigo-pink.css", "apps/sample/src/styles.scss"],
+            "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "apps/sample/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -108,6 +111,43 @@
           "builder": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": ["apps/sample-e2e/**/*.{js,ts}"]
+          }
+        }
+      }
+    },
+    "ngx-fluent-buttons": {
+      "projectType": "library",
+      "root": "libs/ngx-fluent-buttons",
+      "sourceRoot": "libs/ngx-fluent-buttons/src",
+      "prefix": "ngx-fluent-buttons",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/ngx-fluent-buttons/tsconfig.lib.json",
+            "project": "libs/ngx-fluent-buttons/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/ngx-fluent-buttons/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/ngx-fluent-buttons/src/**/*.ts",
+              "libs/ngx-fluent-buttons/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/ngx-fluent-buttons"],
+          "options": {
+            "jestConfig": "libs/ngx-fluent-buttons/jest.config.js",
+            "passWithNoTests": true
           }
         }
       }

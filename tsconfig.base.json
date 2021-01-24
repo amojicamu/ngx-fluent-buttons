@@ -14,7 +14,9 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "ngx-fluent-buttons": ["libs/ngx-fluent-buttons/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

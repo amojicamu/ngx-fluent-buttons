@@ -2,11 +2,12 @@ import {
   Component,
   Input,
   HostBinding,
-  ElementRef, ViewChild,
+  ElementRef,
+  ViewChild,
   ChangeDetectionStrategy,
   AfterViewInit,
   ViewEncapsulation,
-  ChangeDetectorRef
+  ChangeDetectorRef,
 } from '@angular/core';
 
 import {
@@ -20,11 +21,14 @@ import {
   CanColor,
   CanDisable,
   CanDisableRipple,
-  MatRipple
+  MatRipple,
 } from '@angular/material/core';
 
 import { MatMenuTrigger, MatMenu, MenuPositionY } from '@angular/material/menu';
-import { OverlayRef, FlexibleConnectedPositionStrategy } from '@angular/cdk/overlay';
+import {
+  OverlayRef,
+  FlexibleConnectedPositionStrategy,
+} from '@angular/cdk/overlay';
 import { Subscription } from 'rxjs';
 
 const BUTTON_DEFAULT_ATTRIBUTE = 'mat-button';
@@ -36,17 +40,21 @@ const BUTTON_HOST_ATTRIBUTES = [
   BUTTON_FLAT_ATTRIBUTE,
   'mat-icon-button',
   BUTTON_RAISED_ATTRIBUTE,
-  'mat-stroked-button'
+  'mat-stroked-button',
 ];
 
 class SplitButtonBase {
   // tslint:disable-next-line: variable-name
-  constructor(public _elementRef: ElementRef) { }
+  constructor(public _elementRef: ElementRef) {}
 }
 
 // tslint:disable-next-line: variable-name
-const _SplitButtonMixinBase: CanDisableRippleCtor & CanDisableCtor & CanColorCtor &
-  typeof SplitButtonBase = mixinColor(mixinDisabled(mixinDisableRipple(SplitButtonBase)));
+const _SplitButtonMixinBase: CanDisableRippleCtor &
+  CanDisableCtor &
+  CanColorCtor &
+  typeof SplitButtonBase = mixinColor(
+  mixinDisabled(mixinDisableRipple(SplitButtonBase))
+);
 
 @Component({
   selector: `ngx-fluent-button, ngx-fluent-button[mat-button], ngx-fluent-button[mat-raised-button],
@@ -54,22 +62,30 @@ const _SplitButtonMixinBase: CanDisableRippleCtor & CanDisableCtor & CanColorCto
   templateUrl: './splitbutton.html',
   styleUrls: ['./splitbutton.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
 })
-export class SplitButton extends _SplitButtonMixinBase implements AfterViewInit, CanDisable, CanColor, CanDisableRipple {
+export class SplitButton
+  extends _SplitButtonMixinBase
+  implements AfterViewInit, CanDisable, CanColor, CanDisableRipple {
   mode: 'default' | 'split' = 'default';
 
   private posY: MenuPositionY;
   private positionSubscription = Subscription.EMPTY;
 
   @Input('color')
-  set themeColor(value: ThemePalette) { this.color = value; }
+  set themeColor(value: ThemePalette) {
+    this.color = value;
+  }
 
   @Input('disabled')
-  set isDisabled(value: boolean) { this.disabled = value; }
+  set isDisabled(value: boolean) {
+    this.disabled = value;
+  }
 
   @Input('disableRipple')
-  set isRippleDisabled(value: boolean) { this.disableRipple = value; }
+  set isRippleDisabled(value: boolean) {
+    this.disableRipple = value;
+  }
 
   @HostBinding('attr.class') class = 'ngx-fluent-button-host';
 
@@ -131,7 +147,6 @@ export class SplitButton extends _SplitButtonMixinBase implements AfterViewInit,
     // attributes, add the correct corresponding class.
     for (const attr of BUTTON_HOST_ATTRIBUTES) {
       if (this._hasHostAttributes(attr)) {
-
         if (attr === BUTTON_RAISED_ATTRIBUTE && this.mode === 'split') {
           this.wrapperElement.classList.add('split-raised-button');
           this.wrapperElement.classList.add('mat-autocomplete-panel');
@@ -152,24 +167,32 @@ export class SplitButton extends _SplitButtonMixinBase implements AfterViewInit,
     }
 
     this.menuTrigger.menuOpened.subscribe(() => {
-
       // Need to access private overlay to subscribe to position events
       // and react when the menu appears above or below relative to the button
-      const overlayRef = (this.menuTrigger as any)._overlayRef as OverlayRef;
-      const position = (overlayRef as any)._positionStrategy as FlexibleConnectedPositionStrategy;
 
-      this.positionSubscription = position.positionChanges.subscribe(change => {
-        this.posY = change.connectionPair.overlayY === 'top' ? 'below' : 'above';
-        this.menu.panelClass = this.posY === 'above' ? 'split-button-menu-above' : 'split-button-menu-below';
-      });
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const overlayRef = (this.menuTrigger as any)._overlayRef as OverlayRef;
+
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const position = (overlayRef as any)
+        ._positionStrategy as FlexibleConnectedPositionStrategy;
+
+      this.positionSubscription = position.positionChanges.subscribe(
+        (change) => {
+          this.posY =
+            change.connectionPair.overlayY === 'top' ? 'below' : 'above';
+          this.menu.panelClass =
+            this.posY === 'above'
+              ? 'split-button-menu-above'
+              : 'split-button-menu-below';
+        }
+      );
     });
 
-    this.menuTrigger.menuClosed.subscribe(
-      () => {
-        this.cd.markForCheck();
-        this.positionSubscription.unsubscribe()
-      }
-    );
+    this.menuTrigger.menuClosed.subscribe(() => {
+      this.cd.markForCheck();
+      this.positionSubscription.unsubscribe();
+    });
   }
 
   onActionClick(event): void {
@@ -199,6 +222,8 @@ export class SplitButton extends _SplitButtonMixinBase implements AfterViewInit,
 
   /** Gets whether the host has one of the given attributes. */
   _hasHostAttributes(...attributes: string[]) {
-    return attributes.some(attribute => this._getHostElement().hasAttribute(attribute));
+    return attributes.some((attribute) =>
+      this._getHostElement().hasAttribute(attribute)
+    );
   }
 }
