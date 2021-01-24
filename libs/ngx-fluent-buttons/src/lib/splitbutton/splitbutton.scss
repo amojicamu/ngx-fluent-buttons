@@ -1,0 +1,142 @@
+.ngx-fluent-button-host {
+
+  .split-button-wrapper,
+  .command-button-wrapper {
+    display: inline-flex;
+    border-radius: 4px;
+    outline: 0;
+  }
+
+  .command-button-wrapper {
+    .action {
+      .mat-split-arrow-wrapper {
+        padding-left: 8px;
+      }
+    }
+  }
+
+  .split-button-wrapper {
+    &.split-raised-button:not([class*=mat-elevation-z]) {
+        box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+    }
+
+    .mat-button,
+    .mat-flat-button,
+    .mat-stroked-button,
+    .mat-raised-button {
+
+        &.action {
+            // padding: 0px 8px 0px 8px;
+            border-radius: 4px 0px 0px 4px;
+            // display: flex;
+            white-space: normal;
+            line-height: normal;
+
+            ::ng-deep .mat-button-wrapper {
+                text-align: left;
+            }
+
+            // The left border from the trigger button is enough
+            &.mat-stroked-button {
+                border-right: none;
+            }
+        }
+
+        &.trigger {
+            min-width: 31px;
+            padding: 0px 6px 0px 6px;
+            border-radius: 0px 4px 4px 0px;
+
+            // The shadow around raised buttons makes the border redundant
+            // Raised styles are not applied to inner buttons but still check
+            &:not(.mat-raised-button) {
+                border-left: 1px solid rgba(0,0,0,.12);
+            }
+
+            // Match stroked disabled border
+            &.mat-stroked-button:disabled{
+                border-left: 1px solid rgba(0,0,0,.26);
+            }
+        }
+    }
+  }
+
+  .menu-open-below {
+    border-radius: 4px 4px 0px 0px;
+
+    .mat-stroked-button {
+        border-bottom-color: transparent;
+    }
+
+    .action.mat-flat-button,
+    .action.mat-stroked-button {
+        border-radius: 4px 0px 0px 0px;
+    }
+
+    .trigger.mat-flat-button,
+    .trigger.mat-stroked-button {
+        border-radius: 0px 4px 0px 0px;
+    }
+  }
+
+  .menu-open-above {
+    border-radius: 0px 0px 4px 4px;
+
+    .mat-stroked-button {
+        border-top-color: transparent;
+    }
+
+    .action.mat-flat-button,
+    .action.mat-stroked-button {
+        border-radius: 0px 0px 0px 4px;
+    }
+
+    .trigger.mat-flat-button,
+    .trigger.mat-stroked-button {
+        border-radius: 0px 0px 4px 0px;
+    }
+  }
+
+  .mat-split-arrow-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+
+    .mat-split-arrow {
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 5px solid;
+        margin: 0 4px;
+
+        &.open {
+            border-top: 0px;
+            border-bottom: 5px solid;
+        }
+    }
+  }
+}
+
+.split-button-menu-below {
+  // box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+
+  // Third rule applies softer shadow on top
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+
+  &.mat-menu-panel {
+      border-radius: 0px 0px 4px 4px;
+  }
+}
+
+.split-button-menu-above {
+  // box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+
+  // Third rule applies softer top shadow on top
+  box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+
+  &.mat-menu-panel {
+      border-radius: 4px 4px 0px 0px;
+  }
+}
+
+

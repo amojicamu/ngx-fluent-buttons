@@ -1,0 +1,64 @@
+<mat-menu #appMenu="matMenu" xPosition="before">
+    <ng-content select=".split-menu-content">
+    </ng-content>
+</mat-menu>
+
+<ng-template #content>
+    <ng-content></ng-content>
+</ng-template>
+
+<ng-container *ngIf="mode == 'default'">
+    <div class="command-button-wrapper">
+      <button #action
+        mat-button
+        [matMenuTriggerFor]="appMenu"
+        [color]="color"
+        [disabled]="disabled"
+        [disableRipple]="disableRipple"
+        [class.menu-open-below]="isMenuOpen && menuPosition == 'below'"
+        [class.menu-open-above]="isMenuOpen && menuPosition == 'above'"
+        class="action">
+        <ng-container *ngTemplateOutlet="content"></ng-container>
+        <div class="mat-split-arrow-wrapper">
+            <div class="mat-split-arrow" [class.open]="isMenuOpen">
+            </div>
+        </div>
+      </button>
+    </div>
+</ng-container>
+
+<ng-container *ngIf="mode == 'split'">
+    <div #wrapper
+      aria-roledescription="button"
+      role="button"
+      matRipple
+      [class.menu-open-below]="isMenuOpen && menuPosition == 'below'"
+      [class.menu-open-above]="isMenuOpen && menuPosition == 'above'"
+      [matRippleDisabled]="disableRipple || disabled"
+      class="split-button-wrapper">
+      <button #action
+          mat-button
+          [color]="color"
+          [disabled]="disabled"
+          [disableRipple]="true"
+          class="action">
+          <ng-container *ngTemplateOutlet="content"></ng-container>
+      </button>
+      <button #trigger
+          mat-button
+          [matMenuTriggerFor]="appMenu"
+          [color]="color"
+          [disabled]="disabled"
+          [disableRipple]="disableRipple"
+          class="trigger">
+          <div class="mat-split-arrow-wrapper">
+              <div class="mat-split-arrow" [class.open]="isMenuOpen">
+              </div>
+          </div>
+      </button>
+    </div>
+</ng-container>
+
+
+
+
