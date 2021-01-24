@@ -15,9 +15,11 @@ jobs:
           npm install
           npm run nx run ngx-fluent-buttons:build:production
 
-      - name: Publish to NPM registry
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+          registry-url: 'https://registry.npmjs.org'
+      - run: npm publish
         working-directory: dist/libs/ngx-fluent-buttons
-        run: npm publish
-          
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
