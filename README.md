@@ -2,7 +2,6 @@
 
 [![Build Actions Status](https://github.com/amojicamu/ngx-fluent-buttons/workflows/CI/badge.svg)](https://github.com/amojicamu/ngx-fluent-buttons/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-npm run nx run ngx-fluent-buttons:build:production
 [![PRs](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)]()
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
