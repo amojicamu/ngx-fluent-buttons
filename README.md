@@ -14,8 +14,36 @@ Motivated by this [closed issue](https://github.com/angular/components/issues/77
 
 
 
-- 🚀 See it in action on [Stackblitz](https://stackblitz.com/edit/fluent-buttons)
+- See it in action on [Stackblitz](https://stackblitz.com/edit/fluent-buttons)
 
 ## Installation
 
 `npm install ngx-fluent-buttons --save`
+
+## Features
+
+Even though a similar look and feel can be done using Angular Material buttons and buttons, and in plac replacement is not trivial. These components support all features from Angular Material button, using the same properties and directives.
+
+- All variants: normal, raised, flat, stroked
+- States: enabled, disabled
+- Theming: Integrates with exisiting Material theme. Set color to primary, accent, warn
+- Details: High quality components with ripples, positioning strategy etc.
+
+## Quick code example:
+
+```html
+<!-- the split directive makes it a split button as per Fluent Design specs -->
+<ngx-fluent-button split mat-raised-button color="primary">
+  <!-- split menu options -->
+  <ng-container class="split-menu-content">
+    <button mat-menu-item>
+      <mat-icon>code</mat-icon> Contribute
+    </button>
+    <button mat-menu-item>
+      <mat-icon>feedback</mat-icon> <span>Send Feedback</span>
+    </button>
+  </ng-container>
+  <!-- main button icon (optional) and text -->
+  <mat-icon>done</mat-icon> Accept Demo
+</ngx-fluent-button>
+```

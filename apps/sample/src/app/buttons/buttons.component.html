@@ -1,4 +1,19 @@
 <div class="demo-container">
+  <h3>Minimum demo</h3>
+  <ngx-fluent-button split mat-raised-button color="primary">
+    <ng-container class="split-menu-content">
+      <button mat-menu-item>
+        <mat-icon>code</mat-icon> Contribute
+      </button>
+      <button mat-menu-item>
+        <mat-icon>feedback</mat-icon> <span>Send Feedback</span>
+      </button>
+    </ng-container>
+    <mat-icon>done</mat-icon> Accept Demo
+  </ngx-fluent-button>
+  <br />
+  <br />
+  <br />
   <h3>Command Bar Buttom - Contextual Menu Button </h3>
   <p>A fancy way to open a menu</p>
   <ngx-fluent-button mat-button (click)="myHandler($event)">
@@ -25,91 +40,91 @@
   <h3>Split Button </h3>
   <p>Trigger main action or open menu</p>
   <ngx-fluent-button split mat-button>
-      <ng-container *ngTemplateOutlet="menu2" class="split-menu-content"></ng-container>
-      <mat-icon color="warn">done</mat-icon> Accept
+    <ng-container *ngTemplateOutlet="menu2" class="split-menu-content"></ng-container>
+    <mat-icon color="warn">done</mat-icon> Accept
   </ngx-fluent-button>
   <ngx-fluent-button split mat-raised-button>
-      <ng-container *ngTemplateOutlet="menu2" class="split-menu-content"></ng-container>
-      <mat-icon color="warn">done</mat-icon> Accept
+    <ng-container *ngTemplateOutlet="menu2" class="split-menu-content"></ng-container>
+    <mat-icon color="warn">done</mat-icon> Accept
   </ngx-fluent-button>
   <ngx-fluent-button split mat-stroked-button>
-      <ng-container *ngTemplateOutlet="menu2" class="split-menu-content"></ng-container>
-      <mat-icon color="warn">done</mat-icon> Accept
+    <ng-container *ngTemplateOutlet="menu2" class="split-menu-content"></ng-container>
+    <mat-icon color="warn">done</mat-icon> Accept
   </ngx-fluent-button>
   <ngx-fluent-button split mat-flat-button>
-      <ng-container *ngTemplateOutlet="menu2" class="split-menu-content"></ng-container>
-      <mat-icon color="warn">done</mat-icon> Accept
+    <ng-container *ngTemplateOutlet="menu2" class="split-menu-content"></ng-container>
+    <mat-icon color="warn">done</mat-icon> Accept
   </ngx-fluent-button>
   <ngx-fluent-button split mat-button disabled>
-      <ng-container *ngTemplateOutlet="menu2" class="split-menu-content"></ng-container>
-      <mat-icon color="warn">done</mat-icon> Accept
+    <ng-container *ngTemplateOutlet="menu2" class="split-menu-content"></ng-container>
+    <mat-icon color="warn">done</mat-icon> Accept
   </ngx-fluent-button>
   <br />
   <h3>Theming </h3>
   <p>Usa material theming as usual</p>
   <ngx-fluent-button split mat-button>
-      <ng-container *ngTemplateOutlet="menu2" class="split-menu-content"></ng-container>
-      <mat-icon>done</mat-icon> Accept
+    <ng-container *ngTemplateOutlet="menu2" class="split-menu-content"></ng-container>
+    <mat-icon>done</mat-icon> Accept
   </ngx-fluent-button>
   <ngx-fluent-button split mat-button color="primary">
-      <ng-container *ngTemplateOutlet="menu2" class="split-menu-content"></ng-container>
-      <mat-icon>done</mat-icon> Accept
+    <ng-container *ngTemplateOutlet="menu2" class="split-menu-content"></ng-container>
+    <mat-icon>done</mat-icon> Accept
   </ngx-fluent-button>
   <ngx-fluent-button split mat-button color="accent">
-      <ng-container *ngTemplateOutlet="menu2" class="split-menu-content"></ng-container>
-      <mat-icon>done</mat-icon> Accept
+    <ng-container *ngTemplateOutlet="menu2" class="split-menu-content"></ng-container>
+    <mat-icon>done</mat-icon> Accept
   </ngx-fluent-button>
   <ngx-fluent-button split mat-button color="warn">
-      <ng-container *ngTemplateOutlet="menu2" class="split-menu-content"></ng-container>
-      <mat-icon>done</mat-icon> Accept
+    <ng-container *ngTemplateOutlet="menu2" class="split-menu-content"></ng-container>
+    <mat-icon>done</mat-icon> Accept
   </ngx-fluent-button>
   <ngx-fluent-button split mat-button disabled>
-      <ng-container *ngTemplateOutlet="menu2" class="split-menu-content"></ng-container>
-      <mat-icon>done</mat-icon> Accept
+    <ng-container *ngTemplateOutlet="menu2" class="split-menu-content"></ng-container>
+    <mat-icon>done</mat-icon> Accept
   </ngx-fluent-button>
-  <br/>
-  <br/>
+  <br />
+  <br />
   <ngx-fluent-button split mat-raised-button>
-      <ng-container *ngTemplateOutlet="menu2" class="split-menu-content"></ng-container>
-      <mat-icon>done</mat-icon> Accept
+    <ng-container *ngTemplateOutlet="menu2" class="split-menu-content"></ng-container>
+    <mat-icon>done</mat-icon> Accept
   </ngx-fluent-button>
   <ngx-fluent-button split mat-raised-button color="primary">
-      <ng-container *ngTemplateOutlet="menu2" class="split-menu-content"></ng-container>
-      <mat-icon>done</mat-icon> Accept
+    <ng-container *ngTemplateOutlet="menu2" class="split-menu-content"></ng-container>
+    <mat-icon>done</mat-icon> Accept
   </ngx-fluent-button>
   <ngx-fluent-button split mat-raised-button color="accent">
-      <ng-container *ngTemplateOutlet="menu2" class="split-menu-content"></ng-container>
-      <mat-icon>done</mat-icon> Accept
+    <ng-container *ngTemplateOutlet="menu2" class="split-menu-content"></ng-container>
+    <mat-icon>done</mat-icon> Accept
   </ngx-fluent-button>
   <ngx-fluent-button split mat-raised-button color="warn">
-      <ng-container *ngTemplateOutlet="menu2" class="split-menu-content"></ng-container>
-      <mat-icon>done</mat-icon> Accept
+    <ng-container *ngTemplateOutlet="menu2" class="split-menu-content"></ng-container>
+    <mat-icon>done</mat-icon> Accept
   </ngx-fluent-button>
   <ngx-fluent-button split mat-raised-button disabled>
-      <ng-container *ngTemplateOutlet="menu2" class="split-menu-content"></ng-container>
-      <mat-icon>done</mat-icon> Accept
+    <ng-container *ngTemplateOutlet="menu2" class="split-menu-content"></ng-container>
+    <mat-icon>done</mat-icon> Accept
   </ngx-fluent-button>
-  <br/>
-  <br/>
+  <br />
+  <br />
   <ngx-fluent-button split mat-stroked-button>
-      <ng-container *ngTemplateOutlet="menu2" class="split-menu-content"></ng-container>
-      <mat-icon>done</mat-icon> Accept
+    <ng-container *ngTemplateOutlet="menu2" class="split-menu-content"></ng-container>
+    <mat-icon>done</mat-icon> Accept
   </ngx-fluent-button>
   <ngx-fluent-button split mat-stroked-button color="primary">
-      <ng-container *ngTemplateOutlet="menu2" class="split-menu-content"></ng-container>
-      <mat-icon>done</mat-icon> Accept
+    <ng-container *ngTemplateOutlet="menu2" class="split-menu-content"></ng-container>
+    <mat-icon>done</mat-icon> Accept
   </ngx-fluent-button>
   <ngx-fluent-button split mat-stroked-button color="accent">
-      <ng-container *ngTemplateOutlet="menu2" class="split-menu-content"></ng-container>
-      <mat-icon>done</mat-icon> Accept
+    <ng-container *ngTemplateOutlet="menu2" class="split-menu-content"></ng-container>
+    <mat-icon>done</mat-icon> Accept
   </ngx-fluent-button>
   <ngx-fluent-button split mat-stroked-button color="warn">
-      <ng-container *ngTemplateOutlet="menu2" class="split-menu-content"></ng-container>
-      <mat-icon>done</mat-icon> Accept
+    <ng-container *ngTemplateOutlet="menu2" class="split-menu-content"></ng-container>
+    <mat-icon>done</mat-icon> Accept
   </ngx-fluent-button>
   <ngx-fluent-button split mat-stroked-button disabled>
-      <ng-container *ngTemplateOutlet="menu2" class="split-menu-content"></ng-container>
-      <mat-icon>done</mat-icon> Accept
+    <ng-container *ngTemplateOutlet="menu2" class="split-menu-content"></ng-container>
+    <mat-icon>done</mat-icon> Accept
   </ngx-fluent-button>
   <br />
   <h3>Material Buttons </h3>
@@ -126,20 +141,19 @@
 </div>
 
 <ng-template #menu1>
-<button mat-menu-item>
+  <button mat-menu-item>
     <mat-icon>email</mat-icon> Email message
-</button>
-<button mat-menu-item>
+  </button>
+  <button mat-menu-item>
     <mat-icon>calendar_today</mat-icon> Calendar event
-</button>
+  </button>
 </ng-template>
 
 <ng-template #menu2>
-<button mat-menu-item>
+  <button mat-menu-item>
     <mat-icon>add_comment</mat-icon> Add comment
-</button>
-<button mat-menu-item>
+  </button>
+  <button mat-menu-item>
     <mat-icon>security</mat-icon> <span>Run security checks</span>
-</button>
+  </button>
 </ng-template>
-
