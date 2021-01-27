@@ -13,8 +13,7 @@ Implementation based and compatible with [Angular Material](https://material.ang
 Motivated by this [closed issue](https://github.com/angular/components/issues/7765) in the [angular/components](https://github.com/angular/components) repo.
 
 
-
-- See it in action on [Stackblitz](https://stackblitz.com/edit/fluent-buttons)
+👉 **See it in action on  [Stackblitz](https://stackblitz.com/edit/fluent-buttons)**
 
 ## Installation
 

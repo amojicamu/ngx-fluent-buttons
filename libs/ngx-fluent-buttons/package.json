@@ -2,6 +2,7 @@
   "name": "ngx-fluent-buttons",
   "version": "11.1.0-beta1",
   "description": "Fluent Design buttons for Angular",
+  "keywords": ["angular", "material", "split", "buttons", "angular-components", "fluent-design"],
   "peerDependencies": {
     "@angular/common": "^11.0.9",
     "@angular/core": "^11.0.9"
