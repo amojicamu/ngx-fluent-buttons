@@ -64,6 +64,7 @@ const _SplitButtonMixinBase: CanDisableRippleCtor &
   changeDetection: ChangeDetectionStrategy.OnPush,
   encapsulation: ViewEncapsulation.None,
 })
+// eslint-disable-next-line @angular-eslint/component-class-suffix
 export class SplitButton
   extends _SplitButtonMixinBase
   implements AfterViewInit, CanDisable, CanColor, CanDisableRipple {
@@ -72,16 +73,19 @@ export class SplitButton
   private posY: MenuPositionY;
   private positionSubscription = Subscription.EMPTY;
 
+  // eslint-disable-next-line @angular-eslint/no-input-rename
   @Input('color')
   set themeColor(value: ThemePalette) {
     this.color = value;
   }
 
+  // eslint-disable-next-line @angular-eslint/no-input-rename
   @Input('disabled')
   set isDisabled(value: boolean) {
     this.disabled = value;
   }
 
+  // eslint-disable-next-line @angular-eslint/no-input-rename
   @Input('disableRipple')
   set isRippleDisabled(value: boolean) {
     this.disableRipple = value;
