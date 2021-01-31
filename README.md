@@ -49,6 +49,3 @@ Even though this look and feel is achieved using Angular Material buttons and me
 ```
 
 Checkout the full [samples](https://github.com/amojicamu/ngx-fluent-buttons/blob/main/apps/sample/src/app/buttons/buttons.component.html) page with all options
-
-
-`$ ng e2e --record --key 3f2a8c06-66e2-4047-bbe1-fad5482677ad`
