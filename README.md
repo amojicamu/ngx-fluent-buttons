@@ -1,4 +1,4 @@
-# Fluent Buttons
+# Fluent Buttons for Angular Material
 
 [![Build Actions Status](https://github.com/amojicamu/ngx-fluent-buttons/workflows/CI/badge.svg)](https://github.com/amojicamu/ngx-fluent-buttons/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -6,7 +6,7 @@
 [![PRs](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)]()
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
-Microsoft [Fluent Design System](https://www.microsoft.com/design/fluent/#/) buttons components for [Angular](https://angular.io/).
+Microsoft [Fluent Design System](https://developer.microsoft.com/en-us/fluentui#/controls/web/button) buttons components for [Angular](https://angular.io/).
 
 Implementation based and compatible with [Angular Material](https://material.angular.io/).
 
@@ -27,6 +27,7 @@ Even though this look and feel is achieved using Angular Material buttons and me
 - States: enabled, disabled
 - Theming: Integrates with exisiting Material theme. Set color to primary, accent, warn
 - Details: High quality components with ripples, positioning strategy etc.
+- IE11 support
 
 ## Quick code example:
 
@@ -49,3 +50,5 @@ Even though this look and feel is achieved using Angular Material buttons and me
 
 Checkout the full [samples](https://github.com/amojicamu/ngx-fluent-buttons/blob/main/apps/sample/src/app/buttons/buttons.component.html) page with all options
 
+
+`$ ng e2e --record --key 3f2a8c06-66e2-4047-bbe1-fad5482677ad`
