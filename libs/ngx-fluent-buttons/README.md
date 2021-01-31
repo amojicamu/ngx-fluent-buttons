@@ -1,6 +1,7 @@
 # Fluent Buttons for Angular Material
 
 [![Build Actions Status](https://github.com/amojicamu/ngx-fluent-buttons/workflows/CI/badge.svg)](https://github.com/amojicamu/ngx-fluent-buttons/actions)
+[![Fluent Buttons for Angular Material](https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/simple/qiibtp/main&style=flat&logo=cypress)](https://dashboard.cypress.io/projects/qiibtp/runs)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![npm version](https://badge.fury.io/js/%40angular%2Fcdk.svg)](https://www.npmjs.com/package/ngx-fluent-buttons)
 [![PRs](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)]()
