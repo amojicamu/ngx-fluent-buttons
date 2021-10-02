@@ -10,7 +10,9 @@
         "prettier/@typescript-eslint",
         "plugin:prettier/recommended"
       ],
-      "parserOptions": { "project": ["apps/sample/tsconfig.*?.json"] },
+      "parserOptions": {
+        "project": ["apps/sample/tsconfig.*?.json"]
+      },
       "rules": {
         "@angular-eslint/directive-selector": [
           "error",
