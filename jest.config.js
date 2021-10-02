@@ -1,3 +1,9 @@
+const { getJestProjects } = require('@nrwl/jest');
+
 module.exports = {
-  projects: ['<rootDir>/apps/sample', '<rootDir>/libs/ngx-fluent-buttons'],
+  projects: [
+    ...getJestProjects(),
+    '<rootDir>/apps/sample',
+    '<rootDir>/libs/ngx-fluent-buttons',
+  ],
 };

@@ -1,6 +1,45 @@
 {
   "version": 1,
   "projects": {
+    "ngx-fluent-buttons": {
+      "projectType": "library",
+      "root": "libs/ngx-fluent-buttons",
+      "sourceRoot": "libs/ngx-fluent-buttons/src",
+      "prefix": "ngx-fluent-buttons",
+      "architect": {
+        "build": {
+          "builder": "@nrwl/angular:package",
+          "options": {
+            "tsConfig": "libs/ngx-fluent-buttons/tsconfig.lib.json",
+            "project": "libs/ngx-fluent-buttons/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/ngx-fluent-buttons/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/ngx-fluent-buttons/src/**/*.ts",
+              "libs/ngx-fluent-buttons/src/**/*.html"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": [
+            "coverage/libs/ngx-fluent-buttons"
+          ],
+          "options": {
+            "jestConfig": "libs/ngx-fluent-buttons/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    },
     "sample": {
       "projectType": "application",
       "root": "apps/sample",
@@ -15,13 +54,21 @@
             "main": "apps/sample/src/main.ts",
             "polyfills": "apps/sample/src/polyfills.ts",
             "tsConfig": "apps/sample/tsconfig.app.json",
-            "aot": true,
-            "assets": ["apps/sample/src/favicon.ico", "apps/sample/src/assets"],
+            "assets": [
+              "apps/sample/src/favicon.ico",
+              "apps/sample/src/assets"
+            ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "apps/sample/src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
           },
           "configurations": {
             "production": {
@@ -54,7 +101,8 @@
             "es5": {
               "tsConfig": "apps/sample/tsconfig-es5.app.json"
             }
-          }
+          },
+          "defaultConfiguration": ""
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
@@ -87,7 +135,9 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/sample"],
+          "outputs": [
+            "coverage/apps/sample"
+          ],
           "options": {
             "jestConfig": "apps/sample/jest.config.js",
             "passWithNoTests": true
@@ -116,44 +166,9 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/sample-e2e/**/*.{js,ts}"]
-          }
-        }
-      }
-    },
-    "ngx-fluent-buttons": {
-      "projectType": "library",
-      "root": "libs/ngx-fluent-buttons",
-      "sourceRoot": "libs/ngx-fluent-buttons/src",
-      "prefix": "ngx-fluent-buttons",
-      "architect": {
-        "build": {
-          "builder": "@nrwl/angular:package",
-          "options": {
-            "tsConfig": "libs/ngx-fluent-buttons/tsconfig.lib.json",
-            "project": "libs/ngx-fluent-buttons/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "tsConfig": "libs/ngx-fluent-buttons/tsconfig.lib.prod.json"
-            }
-          }
-        },
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
             "lintFilePatterns": [
-              "libs/ngx-fluent-buttons/src/**/*.ts",
-              "libs/ngx-fluent-buttons/src/**/*.html"
+              "apps/sample-e2e/**/*.{js,ts}"
             ]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/ngx-fluent-buttons"],
-          "options": {
-            "jestConfig": "libs/ngx-fluent-buttons/jest.config.js",
-            "passWithNoTests": true
           }
         }
       }
