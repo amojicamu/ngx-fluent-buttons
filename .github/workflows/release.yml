@@ -12,8 +12,8 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Build library
         run: |
-          npm install
-          npm run nx run ngx-fluent-buttons:build:production
+          yarn install
+          yarn run nx run ngx-fluent-buttons:build:production
 
       - uses: actions/setup-node@v1
         with:
